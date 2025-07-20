@@ -28,13 +28,14 @@ Welness AI is a comprehensive health tracking and personal wellness platform tha
   - MongoDB for open food facts data
 
 - **Key Modules:**
-  - Goals
-  - Meals
-  - Facts
-  - Bots
-  - Activities (next)
-  - Workouts (next)
-  - Coach in the Loop (next)
+  - Goals: User goals planning
+  - Meals: Diet planning
+  - Facts: Food nutrition facts data & integrations
+  - Activities: User Activities
+  - Bots: Messengers integrations
+  - Agents: Agents configuration
+  - Workouts (next): Workout planning
+  - Coaches (next): Adding humans in the loop
 
 ### 3. AI/ML Layer (next)
 - **Components:**

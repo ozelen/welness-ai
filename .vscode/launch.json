@@ -1,27 +1,49 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Python: Welness AI Django Backend",
+            "name": "Python: Wellness AI Django Backend",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/backend/apps/manage.py", // Adjust if your manage.py is elsewhere (e.g., ${workspaceFolder}/manage.py)
+            "program": "${workspaceFolder}/backend/apps/manage.py",
             "envFile": "${workspaceFolder}/backend/.env",
             "args": [
                 "runserver",
-                "--noreload" // Crucial for stable debugging, prevents Django autoreloader issues.
+                "--noreload"
             ],
             "django": true,
-            "justMyCode": true, // Set to false if you need to debug into library code.
-            "python": "${workspaceFolder}/backend/.venv/bin/python3",
+            "justMyCode": true,
+            "python": "${workspaceFolder}/backend/.venv/bin/python3.13",
+            "cwd": "${workspaceFolder}/backend/apps",
             "env": {
-                // --- CRITICAL FOR BOT INITIALIZATION WITH --noreload ---
-                "RUN_MAIN": "true", 
-                "PYTHONUNBUFFERED": "1", // Ensures print statements appear in the debug console immediately.
-                "PYTHONPATH": "${workspaceFolder}/backend"
+                "RUN_MAIN": "true",
+                "PYTHONUNBUFFERED": "1",
+                "PYTHONPATH": "${workspaceFolder}/backend/apps",
+                "DJANGO_SETTINGS_MODULE": "apps.settings"
             },
-            "console": "integratedTerminal" // Launches in the integrated terminal.
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Wellness AI Django Backend (uv)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/apps/manage.py",
+            "envFile": "${workspaceFolder}/backend/.env",
+            "args": [
+                "runserver",
+                "--noreload"
+            ],
+            "django": true,
+            "justMyCode": true,
+            "python": "${workspaceFolder}/backend/.venv/bin/python",
+            "cwd": "${workspaceFolder}/backend/apps",
+            "env": {
+                "RUN_MAIN": "true",
+                "PYTHONUNBUFFERED": "1",
+                "PYTHONPATH": "${workspaceFolder}/backend/apps",
+                "DJANGO_SETTINGS_MODULE": "apps.settings"
+            },
+            "console": "integratedTerminal"
         }
     ]
 }

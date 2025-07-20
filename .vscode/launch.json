@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Python: Welness AI Django Backend",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/apps/manage.py", // Adjust if your manage.py is elsewhere (e.g., ${workspaceFolder}/manage.py)
+            "envFile": "${workspaceFolder}/backend/.env",
+            "args": [
+                "runserver",
+                "--noreload" // Crucial for stable debugging, prevents Django autoreloader issues.
+            ],
+            "django": true,
+            "justMyCode": true, // Set to false if you need to debug into library code.
+            "python": "${workspaceFolder}/backend/.venv/bin/python3",
+            "env": {
+                // --- CRITICAL FOR BOT INITIALIZATION WITH --noreload ---
+                "RUN_MAIN": "true", 
+                "PYTHONUNBUFFERED": "1", // Ensures print statements appear in the debug console immediately.
+                "PYTHONPATH": "${workspaceFolder}/backend"
+            },
+            "console": "integratedTerminal" // Launches in the integrated terminal.
+        }
+    ]
+}

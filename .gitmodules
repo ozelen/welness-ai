@@ -1,0 +1,9 @@
+[submodule "welness-ai-backend"]
+	path = welness-ai-backend
+	url = git@github.com:ozelen/welness-ai-backend.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:ozelen/welness-ai-backend.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:ozelen/welness-ai-frontend.git

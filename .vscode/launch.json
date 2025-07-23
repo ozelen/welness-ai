@@ -44,6 +44,64 @@
                 "DJANGO_SETTINGS_MODULE": "apps.settings"
             },
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Flutter: Wellness AI Mobile App",
+            "type": "dart",
+            "request": "launch",
+            "program": "${workspaceFolder}/frontend/flutter-app/lib/main.dart",
+            "cwd": "${workspaceFolder}/frontend/flutter-app",
+            "deviceId": "9909B8FA-9B56-4632-B5EA-14E14B2B20C8",
+            "console": "debugConsole"
+        },
+        {
+            "name": "Flutter: Wellness AI Mobile App (Profile)",
+            "type": "dart",
+            "request": "launch",
+            "program": "${workspaceFolder}/frontend/flutter-app/lib/main.dart",
+            "cwd": "${workspaceFolder}/frontend/flutter-app",
+            "deviceId": "9909B8FA-9B56-4632-B5EA-14E14B2B20C8",
+            "flutterMode": "profile",
+            "console": "debugConsole"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Wellness AI: Full Stack (Backend + Flutter)",
+            "configurations": [
+                "Python: Wellness AI Django Backend (uv)",
+                "Flutter: Wellness AI Mobile App"
+            ],
+            "stopAll": true,
+            "presentation": {
+                "hidden": false,
+                "group": "wellness-ai",
+                "order": 1
+            }
+        },
+        {
+            "name": "Wellness AI: Backend Only",
+            "configurations": [
+                "Python: Wellness AI Django Backend (uv)"
+            ],
+            "stopAll": true,
+            "presentation": {
+                "hidden": false,
+                "group": "wellness-ai",
+                "order": 2
+            }
+        },
+        {
+            "name": "Wellness AI: Flutter Only",
+            "configurations": [
+                "Flutter: Wellness AI Mobile App"
+            ],
+            "stopAll": true,
+            "presentation": {
+                "hidden": false,
+                "group": "wellness-ai",
+                "order": 3
+            }
         }
     ]
 }

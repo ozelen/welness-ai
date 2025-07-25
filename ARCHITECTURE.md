@@ -14,9 +14,9 @@ Welness AI is a comprehensive health tracking and personal wellness platform tha
   - User Authorization
   - User Onboarding
   - User Dashboard
-  - Diet Plan
+  - Diet Planning
   - Scanning Barcodes
-  - Chat interface
+  - Chat interface with AI and other humans separately, mixed or grouped
   - Multi-language Support System (next)
   - Device Integration Interface (next)
   
